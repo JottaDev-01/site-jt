@@ -1,0 +1,118 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitoSaúde</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo-saude.jpeg" alt="Logo CytoSaúde" class="logo">
+            <div class="header-text">
+                <h1>CitoSaúde</h1>
+                <p>Tratamento seguro e com acompanhamento especializado!</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="benefits">
+        <h2>Por que escolher CitoSaúde?</h2>
+        <div class="benefit-list">
+            <div class="benefit">
+                <h3>Tratamento totalmente seguro</h3>
+                <p>Resultados no mesmo dia com acompanhamento adequado.</p>
+            </div>
+            <div class="benefit">
+                <h3>Sigilo total</h3>
+                <p>Contem sigilo total para todos pacientes.</p>
+            </div>
+            <div class="benefit">
+                <h3>Especialistas no assunto</h3>
+                <p>Especialistas a mais de 5 anos no assunto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <p>Quer começar seu atendimento agora? Fale com um especialista!</p>
+        <a class="cta-button" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank">Fale com um especialista</a>
+    </section>
+
+    <section class="stats">
+        <h2>Estatísticas de CitoSaúde</h2>
+        <div class="stat-list">
+            <div class="stat">
+                <h3 class="count" data-target="10000">0</h3>
+                <p>Pacientes satisfeitos</p>
+            </div>
+            <div class="stat">
+                <h3 class="count" data-target="95">0</h3>
+                <p>% Pacientes tem resultado no mesmo dia após o uso</p>
+            </div>
+            <div class="stat">
+                <h3 class="count" data-target="100">0</h3>
+                <p>% Tratamento seguro e aprovado por especialistas</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <h2>Garantia de Qualidade e Segurança</h2>
+        <p>100% seguro e eficaz, seguindo todos os padrões de qualidade.</p>
+        <p>Satisfação garantida.</p>
+    </section>
+
+    <footer>
+        &copy; 2025 CitoSaúde. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        // Contagem animada das estatísticas
+        const counters = document.querySelectorAll('.count');
+        const speed = 50;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        const statsSection = document.querySelector('.stats');
+        let counted = false;
+        window.addEventListener('scroll', () => {
+            const sectionPos = statsSection.getBoundingClientRect().top;
+            const screenPos = window.innerHeight;
+            if (sectionPos < screenPos && !counted) {
+                animateCounters();
+                counted = true;
+            }
+        });
+
+        // Animação do header-text
+        window.addEventListener('DOMContentLoaded', () => {
+            const headerText = document.querySelector('.header-text');
+            setTimeout(() => {
+                headerText.classList.add('visible');
+            }, 500);
+        });
+    </script>
+
+</body>
+</html>
