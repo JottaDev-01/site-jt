@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CitoSaúde</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,36 +16,36 @@
             <img src="logo-saude.jpeg" alt="Logo CytoSaúde" class="logo">
             <div class="header-text">
                 <h1>CitoSaúde</h1>
-                <p>Tratamento seguro e com acompanhamento especializado!</p>
+                <p>Atendimento seguro, sigiloso e com especialistas!</p>
             </div>
         </div>
     </header>
 
     <section class="benefits">
-        <h2>Por que escolher CitoSaúde?</h2>
+        <h2>Por que escolher a CitoSaúde?</h2>
         <div class="benefit-list">
             <div class="benefit">
-                <h3>Tratamento totalmente seguro</h3>
-                <p>Resultados no mesmo dia com acompanhamento adequado.</p>
+                <h3>Tratamento seguro</h3>
+                <p>Acompanhamento especializado e resultados no mesmo dia.</p>
             </div>
             <div class="benefit">
-                <h3>Sigilo total</h3>
-                <p>Contem sigilo total para todos pacientes.</p>
+                <h3>Sigilo absoluto</h3>
+                <p>Privacidade completa durante todo o processo.</p>
             </div>
             <div class="benefit">
-                <h3>Especialistas no assunto</h3>
-                <p>Especialistas a mais de 5 anos no assunto.</p>
+                <h3>Equipe especialista</h3>
+                <p>Profissionais com mais de 5 anos de experiência.</p>
             </div>
         </div>
     </section>
 
     <section class="cta">
-        <p>Quer começar seu atendimento agora? Fale com um especialista!</p>
+        <p>Inicie seu atendimento agora mesmo com nossos especialistas!</p>
         <a class="cta-button" href="https://wa.me/SEU_NUMERO_AQUI" target="_blank">Fale com um especialista</a>
     </section>
 
     <section class="stats">
-        <h2>Estatísticas de CitoSaúde</h2>
+        <h2>Nossos Resultados</h2>
         <div class="stat-list">
             <div class="stat">
                 <h3 class="count" data-target="10000">0</h3>
@@ -52,27 +53,26 @@
             </div>
             <div class="stat">
                 <h3 class="count" data-target="95">0</h3>
-                <p>% Pacientes tem resultado no mesmo dia após o uso</p>
+                <p>% Resultado no mesmo dia</p>
             </div>
             <div class="stat">
                 <h3 class="count" data-target="100">0</h3>
-                <p>% Tratamento seguro e aprovado por especialistas</p>
+                <p>% Tratamento aprovado por especialistas</p>
             </div>
         </div>
     </section>
 
     <section class="guarantee">
-        <h2>Garantia de Qualidade e Segurança</h2>
-        <p>100% seguro e eficaz, seguindo todos os padrões de qualidade.</p>
-        <p>Satisfação garantida.</p>
+        <h2>Qualidade e Segurança</h2>
+        <p>Processo 100% seguro, sigiloso e eficiente.</p>
+        <p>Satisfação garantida com acompanhamento completo.</p>
     </section>
 
     <footer>
-        &copy; 2025 CitoSaúde. Todos os direitos reservados.
+        © 2025 CitoSaúde — Todos os direitos reservados.
     </footer>
 
     <script>
-        // Contagem animada das estatísticas
         const counters = document.querySelectorAll('.count');
         const speed = 50;
 
@@ -85,7 +85,7 @@
 
                     if (count < target) {
                         counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 30);
+                        setTimeout(updateCount, 25);
                     } else {
                         counter.innerText = target;
                     }
@@ -105,12 +105,8 @@
             }
         });
 
-        // Animação do header-text
         window.addEventListener('DOMContentLoaded', () => {
-            const headerText = document.querySelector('.header-text');
-            setTimeout(() => {
-                headerText.classList.add('visible');
-            }, 500);
+            document.querySelector('.header-text').classList.add('visible');
         });
     </script>
 
